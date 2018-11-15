@@ -19,14 +19,16 @@ public class Main {
 
         System.out.println(" ");
 
-        Car mercedes = new Car("Mercedes", 1995, "Gray", 200);
+        Car mercedes = new Driver("Mercedes", 1995, "Gray", 200, "John", 19);
 
-        Car bmw = new Car("BMW", 2005, "Black", 220);
+        Car bmw = new Driver("BMW", 2005, "Black", 220, "Alex", 16);
 
-        System.out.print(mercedes.getBrand()+" ");
-        System.out.print(mercedes.getYear()+" ");
-        System.out.print(mercedes.getColour()+" ");
-        System.out.println( mercedes.getSpeedMax()+" ");
+        System.out.println(mercedes.getBrand());
+        System.out.println(mercedes.getYear());
+        System.out.println(mercedes.getColour());
+        System.out.println(mercedes.getSpeedMax());
+        System.out.print(((Driver) mercedes).getName()+" ");
+        System.out.println(((Driver) mercedes).getAge()+" ");
 
         mercedes.movement();
         mercedes.movement2();
@@ -36,10 +38,12 @@ public class Main {
 
         System.out.println(" ");
 
-        System.out.print(bmw.getBrand()+" ");
-        System.out.print(bmw.getYear()+" ");
-        System.out.print(bmw.getColour()+" ");
+        System.out.println(bmw.getBrand()+" ");
+        System.out.println(bmw.getYear()+" ");
+        System.out.println(bmw.getColour()+" ");
         System.out.println(bmw.getSpeedMax()+" ");
+        System.out.print(((Driver) bmw).getName()+" ");
+        System.out.println(((Driver) bmw).getAge()+" ");
 
         bmw.movement();
         bmw.movement2();

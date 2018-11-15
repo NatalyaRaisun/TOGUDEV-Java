@@ -40,11 +40,9 @@ public class Car {
     }
 
     public void movement() {
-        System.out.print("Drive forward"+" ");
     }
 
     public void movement2() {
-        System.out.print("Drive backward"+" ");
     }
 
     public void turn() {
@@ -52,7 +50,7 @@ public class Car {
     }
 
     public void turn2() {
-        System.out.print("Right turn"+" ");
+        System.out.println("Right turn");
     }
 
     public void signal() {
