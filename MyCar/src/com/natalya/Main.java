@@ -3,40 +3,43 @@ package com.natalya;
 public class Main {
 
     public static void main(String[] args) {
-        Car mersedes = new Car();
-        mersedes.setBrand("Mersedes");
-        mersedes.setYear(1995);
-        mersedes.setColour("Gray");
-        mersedes.setSpeedMax(200);
+        Car car1 = new Car("Lada", 1990, "White", 180);
 
-        Car bmw = new Car();
-        bmw.setBrand("BMW");
-        bmw.setYear(2005);
-        bmw.setColour("Black");
-        bmw.setSpeedMax(220);
+        Car car2 = new Car("Lada", 1990, "White", 180);
+         //Создала 2 обьекта с одинаковыми полями
 
-        System.out.println("The first car is " + mersedes.getBrand());
-        System.out.println("Year of car manufacture " + mersedes.getYear());
-        System.out.println("Color if " + mersedes.getColour());
-        System.out.println("Maximum speed " + mersedes.getSpeedMax());
+        System.out.println(car1 == car2); // Сравнила эти 2 объекта и получила значение false
+        /*
+         Оператор new для каждой из переменных создает свой экземпляр класса.
+         Если сравнивать эти две переменные через == или equals, каждый раз будет возвращаться false, потому что
+         обе переменные указывают на разные обьекты, которые находятся в разных участках памяти. Чтобы решить эту проблему
+         мы должны переопределить метод equals в классе Car
+        */
+        System.out.println(car1.equals(car2)); // После переопределения получаем true
 
-        System.out.println("");
+        System.out.println(" ");
 
-        mersedes.movement();
-        mersedes.movement2();
-        mersedes.turn();
-        mersedes.turn2();
-        mersedes.signal();
+        Car mercedes = new Car("Mercedes", 1995, "Gray", 200);
 
-        System.out.println("");
-        System.out.println("");
+        Car bmw = new Car("BMW", 2005, "Black", 220);
 
-        System.out.println("The second car is " + bmw.getBrand());
-        System.out.println("Year of car manufacture " + bmw.getYear());
-        System.out.println("Color if " + bmw.getColour());
-        System.out.println("Maximum speed " + bmw.getSpeedMax());
+        System.out.print(mercedes.getBrand()+" ");
+        System.out.print(mercedes.getYear()+" ");
+        System.out.print(mercedes.getColour()+" ");
+        System.out.println( mercedes.getSpeedMax()+" ");
 
-        System.out.println("");
+        mercedes.movement();
+        mercedes.movement2();
+        mercedes.turn();
+        mercedes.turn2();
+        mercedes.signal();
+
+        System.out.println(" ");
+
+        System.out.print(bmw.getBrand()+" ");
+        System.out.print(bmw.getYear()+" ");
+        System.out.print(bmw.getColour()+" ");
+        System.out.println(bmw.getSpeedMax()+" ");
 
         bmw.movement();
         bmw.movement2();

@@ -6,57 +6,57 @@ public class Car {
     private String colour;
     private int speedMax;
 
-    public String getBrand() {
-        return brand;
+    public Car(String brand, int year, String colour, int speedMax){
+        this.brand = brand;
+        this.year = year;
+        this.colour =  colour;
+        this.speedMax = speedMax;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public boolean equals(Object obj){
+        Car car = (Car) obj;
+       this.brand = car.brand;
+       this.year = car.year;
+       this.colour = car.colour;
+       this.speedMax = car.speedMax;
+       return true; /* Переопределила метод equals. Теперь переопределенный метод equals
+                       проверяет, являются ли два объекта равными */
+    }
+
+    public String getBrand() {
+        return brand;
     }
 
     public int getYear() {
         return year;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     public String getColour() {
         return colour;
-    }
-
-    public void setColour(String colour) {
-        this.colour = colour;
     }
 
     public int getSpeedMax() {
         return speedMax;
     }
 
-    public void setSpeedMax(int speedMax) {
-        this.speedMax = speedMax;
+    public void movement() {
+        System.out.print("Drive forward"+" ");
     }
 
-    public void movement(){
-        System.out.println("Drive forward");
-    }
-
-    public void movement2(){
-        System.out.println("Drive backward");
+    public void movement2() {
+        System.out.print("Drive backward"+" ");
     }
 
     public void turn() {
-        System.out.println("Left turn");
+        System.out.print("Left turn"+" ");
     }
 
     public void turn2() {
-        System.out.println("Right turn");
+        System.out.print("Right turn"+" ");
     }
 
     public void signal() {
         System.out.println("Bip-Bip");
-
     }
 }
 
