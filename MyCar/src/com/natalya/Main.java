@@ -3,9 +3,9 @@ package com.natalya;
 public class Main {
 
     public static void main(String[] args) {
-        Car car1 = new Car("Lada", 1990, "White", 180);
+        Car car1 = new Car("Лада", 1990, "Белый", 180);
 
-        Car car2 = new Car("Lada", 1990, "White", 180);
+        Car car2 = new Car("Лада", 1990, "Белый", 180);
          //Создала 2 обьекта с одинаковыми полями
 
         System.out.println(car1 == car2); // Сравнила эти 2 объекта и получила значение false
@@ -19,9 +19,9 @@ public class Main {
 
         System.out.println(" ");
 
-        Car mercedes = new Driver("Mercedes", 1995, "Gray", 200, "John", 19);
+        Car mercedes = new Driver("Мерседес", 1995, "Серый", 200, "Женя", 19);
 
-        Car bmw = new Driver("BMW", 2005, "Black", 220, "Alex", 16);
+        Car bmw = new Driver("БМВ", 2005, "Черный", 220, "Петя", 16);
 
         System.out.println(mercedes.getBrand());
         System.out.println(mercedes.getYear());
@@ -51,5 +51,40 @@ public class Main {
         bmw.turn2();
         bmw.signal();
 
+        System.out.println(" ");
+
+        Driver bus = new Bus("ПАЗ", 1990, "Желтый", 180, "Вася", 40, 35);
+        System.out.println(bus.getBrand());
+        System.out.println(bus.getYear());
+        System.out.println(bus.getColour());
+        System.out.println(bus.getSpeedMax());
+        System.out.print(bus.getName()+" ");
+        System.out.println(bus.getAge()+" ");
+        System.out.println(((Bus) bus).getNumberOfPass());
+
+        ((Bus) bus).passengers();
+        bus.movement();
+        bus.movement2();
+        bus.turn();
+        bus.turn2();
+        bus.signal();
+
+        System.out.println("  ");
+
+        Driver sportCar = new SportCar("Ламборджини", 2018, "Красный", 420, "Илья", 25 );
+        System.out.println(sportCar.getBrand());
+        System.out.println(sportCar.getYear());
+        System.out.println(sportCar.getColour());
+        System.out.println(sportCar.getSpeedMax());
+        System.out.print(sportCar.getName()+" ");
+        System.out.println(sportCar.getAge()+" ");
+
+        sportCar.movement();
+        sportCar.movement2();
+        sportCar.turn();
+        sportCar.turn2();
+        sportCar.signal();
+        ((SportCar) sportCar).speed();
+        ((SportCar) sportCar).people();
     }
 }
