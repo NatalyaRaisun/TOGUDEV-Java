@@ -3,14 +3,14 @@ package com.natalya;
 import java.util.logging.Logger;
 
 public class SportCar extends Driver {
-        private static Logger log = Logger.getLogger(SportCar.class.getName());
+    private static Logger log = Logger.getLogger(SportCar.class.getName());
 
     public SportCar(String brand, int year, String colour, int speedMax, String name, int age) {
         super(brand, year, colour, speedMax, name, age);
         log.info("Bus конструктор");
     }
 
-    public void speed() {
+    public final void speed() {
         if (getSpeedMax() > 350) {
             System.out.println("Я самый быстрый");
         } else {
@@ -18,7 +18,7 @@ public class SportCar extends Driver {
         }
     }
 
-    public void people(){
+    public final void people() {
         System.out.println("Все смотрят только на меня!!!");
     }
 }

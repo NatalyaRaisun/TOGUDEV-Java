@@ -9,21 +9,21 @@ public class Car {
     private int speedMax;
     private static Logger log = Logger.getLogger(Car.class.getName());
 
-    public Car(String brand, int year, String colour, int speedMax){
+    public Car(String brand, int year, String colour, int speedMax) {
         this.brand = brand;
         this.year = year;
-        this.colour =  colour;
+        this.colour = colour;
         this.speedMax = speedMax;
         log.info("Car конструктор");
     }
 
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         Car car = (Car) obj;
-       this.brand = car.brand;
-       this.year = car.year;
-       this.colour = car.colour;
-       this.speedMax = car.speedMax;
-       return true; /* Переопределила метод equals. Теперь переопределенный метод equals
+        this.brand = car.brand;
+        this.year = car.year;
+        this.colour = car.colour;
+        this.speedMax = car.speedMax;
+        return true; /* Переопределила метод equals. Теперь переопределенный метод equals
                        проверяет, являются ли два объекта равными */
     }
 
@@ -52,7 +52,7 @@ public class Car {
     }
 
     public void turn() {
-        System.out.print("Поворот налево"+" ");
+        System.out.print("Поворот налево" + " ");
     }
 
     public void turn2() {

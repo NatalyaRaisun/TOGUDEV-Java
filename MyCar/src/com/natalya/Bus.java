@@ -12,20 +12,20 @@ public class Bus extends Driver {
         log.info("Bus конструктор");
     }
 
-    public int getNumberOfPass() {
+    public final int getNumberOfPass() {
         return numberOfPass;
     }
 
-    public void passengers(){
+    public final void passengers() {
         if (numberOfPass > 50) {
             System.out.println("ПЕРЕВЕС!!! Автобус не может ехать");
         } else {
             System.out.println("Автобус едет");
         }
-   }
+    }
 
     @Override
-    public void signal() {
+    public final void signal() {
         System.out.println("Тууу-Тууу");
     }
 }

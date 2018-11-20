@@ -6,7 +6,7 @@ public class Main {
         Car car1 = new Car("Лада", 1990, "Белый", 180);
 
         Car car2 = new Car("Лада", 1990, "Белый", 180);
-         //Создала 2 обьекта с одинаковыми полями
+        //Создала 2 обьекта с одинаковыми полями
 
         System.out.println(car1 == car2); // Сравнила эти 2 объекта и получила значение false
         /*
@@ -19,16 +19,16 @@ public class Main {
 
         System.out.println(" ");
 
-        Car mercedes = new Driver("Мерседес", 1995, "Серый", 200, "Женя", 19);
+        Driver mercedes = new Driver("Мерседес", 1995, "Серый", 200, "Женя", 19);
 
-        Car bmw = new Driver("БМВ", 2005, "Черный", 220, "Петя", 16);
+        Driver bmw = new Driver("БМВ", 2005, "Черный", 220, "Петя", 16);
 
         System.out.println(mercedes.getBrand());
         System.out.println(mercedes.getYear());
         System.out.println(mercedes.getColour());
         System.out.println(mercedes.getSpeedMax());
-        System.out.print(((Driver) mercedes).getName()+" ");
-        System.out.println(((Driver) mercedes).getAge()+" ");
+        System.out.print(mercedes.getName() + " ");
+        System.out.println(mercedes.getAge() + " ");
 
         mercedes.movement();
         mercedes.movement2();
@@ -38,12 +38,12 @@ public class Main {
 
         System.out.println(" ");
 
-        System.out.println(bmw.getBrand()+" ");
-        System.out.println(bmw.getYear()+" ");
-        System.out.println(bmw.getColour()+" ");
-        System.out.println(bmw.getSpeedMax()+" ");
-        System.out.print(((Driver) bmw).getName()+" ");
-        System.out.println(((Driver) bmw).getAge()+" ");
+        System.out.println(bmw.getBrand() + " ");
+        System.out.println(bmw.getYear() + " ");
+        System.out.println(bmw.getColour() + " ");
+        System.out.println(bmw.getSpeedMax() + " ");
+        System.out.print(bmw.getName() + " ");
+        System.out.println(bmw.getAge() + " ");
 
         bmw.movement();
         bmw.movement2();
@@ -53,16 +53,16 @@ public class Main {
 
         System.out.println(" ");
 
-        Driver bus = new Bus("ПАЗ", 1990, "Желтый", 180, "Вася", 40, 35);
+        Bus bus = new Bus("ПАЗ", 1990, "Желтый", 180, "Вася", 40, 35);
         System.out.println(bus.getBrand());
         System.out.println(bus.getYear());
         System.out.println(bus.getColour());
         System.out.println(bus.getSpeedMax());
-        System.out.print(bus.getName()+" ");
-        System.out.println(bus.getAge()+" ");
-        System.out.println(((Bus) bus).getNumberOfPass());
+        System.out.print(bus.getName() + " ");
+        System.out.println(bus.getAge() + " ");
+        System.out.println(bus.getNumberOfPass());
 
-        ((Bus) bus).passengers();
+        bus.passengers();
         bus.movement();
         bus.movement2();
         bus.turn();
@@ -71,20 +71,20 @@ public class Main {
 
         System.out.println("  ");
 
-        Driver sportCar = new SportCar("Ламборджини", 2018, "Красный", 420, "Илья", 25 );
+        SportCar sportCar = new SportCar("Ламборджини", 2018, "Красный", 420, "Илья", 25);
         System.out.println(sportCar.getBrand());
         System.out.println(sportCar.getYear());
         System.out.println(sportCar.getColour());
         System.out.println(sportCar.getSpeedMax());
-        System.out.print(sportCar.getName()+" ");
-        System.out.println(sportCar.getAge()+" ");
+        System.out.print(sportCar.getName() + " ");
+        System.out.println(sportCar.getAge() + " ");
 
         sportCar.movement();
         sportCar.movement2();
         sportCar.turn();
         sportCar.turn2();
         sportCar.signal();
-        ((SportCar) sportCar).speed();
-        ((SportCar) sportCar).people();
+        sportCar.speed();
+        sportCar.people();
     }
 }
