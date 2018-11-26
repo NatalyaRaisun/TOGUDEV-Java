@@ -23,9 +23,4 @@ public class Bus extends Driver {
             System.out.println("Автобус едет");
         }
     }
-
-    @Override
-    public final void signal() {
-        System.out.println("Тууу-Тууу");
-    }
 }

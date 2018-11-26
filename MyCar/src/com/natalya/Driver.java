@@ -2,7 +2,7 @@ package com.natalya;
 
 import java.util.logging.Logger;
 
-public class Driver extends Car {
+public class Driver extends AbstractAuto implements IMyInterface {
     private String name;
     private int age;
     private static Logger log = Logger.getLogger(Driver.class.getName());
@@ -14,12 +14,8 @@ public class Driver extends Car {
         log.info("Driver конструктор");
     }
 
-    public String getName() {
-        return name;
-    }
-
     @Override
-    public void movement() {
+    public void driveForward() {
         if (age >= 18) {
             System.out.println("Едем вперед " + "Машина едет");
         } else {
@@ -28,7 +24,7 @@ public class Driver extends Car {
     }
 
     @Override
-    public void movement2() {
+    public void driveBackward() {
         if (age >= 18) {
             System.out.println("Едем назад " + "Машина едет");
         } else {
@@ -36,9 +32,27 @@ public class Driver extends Car {
         }
     }
 
-    public int getAge() {
+    @Override
+    public void turnLeft() {
+        System.out.print("Поворот налево" + " ");
+    }
+
+    @Override
+    public void turnRight() {
+        System.out.println("Поворот направо");
+    }
+
+    @Override
+    public void signal() {
+        System.out.println("beeep");
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+        public int getAge() {
         return age;
-
-
     }
 }

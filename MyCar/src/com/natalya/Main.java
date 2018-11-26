@@ -2,10 +2,11 @@ package com.natalya;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Car car1 = new Car("Лада", 1990, "Белый", 180);
 
-        Car car2 = new Car("Лада", 1990, "Белый", 180);
+    public static void main(String[] args) {
+        Car car1 = new Car("Лада", 1990);
+
+        Car car2 = new Car("Лада", 199);
         //Создала 2 обьекта с одинаковыми полями
 
         System.out.println(car1 == car2); // Сравнила эти 2 объекта и получила значение false
@@ -30,10 +31,10 @@ public class Main {
         System.out.print(mercedes.getName() + " ");
         System.out.println(mercedes.getAge() + " ");
 
-        mercedes.movement();
-        mercedes.movement2();
-        mercedes.turn();
-        mercedes.turn2();
+        mercedes.driveForward();
+        mercedes.driveBackward();
+        mercedes.turnLeft();
+        mercedes.turnRight();
         mercedes.signal();
 
         System.out.println(" ");
@@ -45,10 +46,10 @@ public class Main {
         System.out.print(bmw.getName() + " ");
         System.out.println(bmw.getAge() + " ");
 
-        bmw.movement();
-        bmw.movement2();
-        bmw.turn();
-        bmw.turn2();
+        bmw.driveForward();
+        bmw.driveBackward();
+        bmw.turnLeft();
+        bmw.turnRight();
         bmw.signal();
 
         System.out.println(" ");
@@ -63,10 +64,10 @@ public class Main {
         System.out.println(bus.getNumberOfPass());
 
         bus.passengers();
-        bus.movement();
-        bus.movement2();
-        bus.turn();
-        bus.turn2();
+        bus.driveForward();
+        bus.driveBackward();
+        bus.turnLeft();
+        bus.turnRight();
         bus.signal();
 
         System.out.println("  ");
@@ -79,10 +80,10 @@ public class Main {
         System.out.print(sportCar.getName() + " ");
         System.out.println(sportCar.getAge() + " ");
 
-        sportCar.movement();
-        sportCar.movement2();
-        sportCar.turn();
-        sportCar.turn2();
+        sportCar.driveForward();
+        sportCar.driveBackward();
+        sportCar.turnLeft();
+        sportCar.turnRight();
         sportCar.signal();
         sportCar.speed();
         sportCar.people();
